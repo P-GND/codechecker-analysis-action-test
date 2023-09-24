@@ -48,7 +48,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: "Full findings"
-          path: ${{ steps.codechecker.outputs.result-html-dir }}
+          path: ${{ steps.codechecker.outputs.results }}
           if-no-files-found: error
 
 
