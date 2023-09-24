@@ -31,7 +31,7 @@ jobs:
           cmake ../src -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
   
       # Run the analysis
-      - uses: whisperity/codechecker-analysis-action@@master
+      - uses: whisperity/codechecker-analysis-action@master
         continue-on-error: true
         id: codechecker
         with:
