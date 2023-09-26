@@ -38,6 +38,9 @@ jobs:
           llvm-version: 'latest'
           install-custom: true
           version: 'master'
+          report-converter: true
+          original-analyser: "cppcheck"
+          original-analysis-output: "cppcheck_reports.json"
           repository: 'Ericsson/CodeChecker'
   
           config: .github/codechecker.json
