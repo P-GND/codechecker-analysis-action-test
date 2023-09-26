@@ -40,7 +40,7 @@ jobs:
           version: 'master'
           report-converter: true
           original-analyser: "cppcheck"
-          original-analysis-output: "cppcheck_reports.json"
+          original-analysis-output: ${{ steps.codechecker.outputs.analyze-output }}
           repository: 'Ericsson/CodeChecker'
   
           config: .github/codechecker.json
