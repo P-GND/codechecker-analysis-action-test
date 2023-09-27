@@ -9,8 +9,6 @@ on:
       - '**.md'
   workflow_dispatch:
 
-  
-
 concurrency:
   group: codechecker-${{ github.ref }}
   cancel-in-progress: true
