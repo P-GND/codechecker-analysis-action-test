@@ -27,6 +27,8 @@ jobs:
           mkdir Build
           cd Build
           cmake ../src -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_USERNAME }}"
+          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_PASSWORD }}"
 
       - uses: whisperity/codechecker-analysis-action@master
         id: codechecker
@@ -53,9 +55,7 @@ jobs:
           store-username: ${{ secrets.CODECHECKER_USERNAME }}
           store-password: ${{ secrets.CODECHECKER_PASSWORD }}
 
-        run: |
-          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_USERNAME }}"
-          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_PASSWORD }}"
+        
 
       - name: "Upload static analysis results (push)"
         if: ${{ github.event_name == 'push' && steps.codechecker.outputs.warnings }}
