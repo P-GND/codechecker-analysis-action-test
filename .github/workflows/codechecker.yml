@@ -27,8 +27,6 @@ jobs:
           mkdir Build
           cd Build
           cmake ../src -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_USERNAME }}"
-          echo "CODECHECKER_USERNAME: ${{ secrets.CODECHECKER_PASSWORD }}"
 
       - uses: whisperity/codechecker-analysis-action@master
         id: codechecker
