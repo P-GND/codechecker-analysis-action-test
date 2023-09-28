@@ -13,7 +13,6 @@ concurrency:
   group: codechecker-${{ github.ref }}
   cancel-in-progress: true
 
-
 jobs:
   ubuntu_2004:
     name: "Analysis on Ubuntu 20.04"
