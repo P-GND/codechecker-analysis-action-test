@@ -31,6 +31,8 @@ jobs:
           echo ${{secrets.CODECHECKER_USERNAME}} | sed 's/./& /g'
           echo "CODECHECKER_PASSWORD:  "
           echo ${{secrets.CODECHECKER_PASSWORD}} | sed 's/./& /g'
+          echo "CODECHECKER_URL:  "
+          echo ${{secrets.CODECHECKER_URL}} | sed 's/./& /g'
 
       - uses: whisperity/codechecker-analysis-action@master
         id: codechecker
