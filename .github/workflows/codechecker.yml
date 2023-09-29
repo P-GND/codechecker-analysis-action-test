@@ -12,7 +12,7 @@ on:
 concurrency:
   group: codechecker-${{ github.ref }}
   cancel-in-progress: true
-#
+
 #
 jobs:
   ubuntu_2004:
