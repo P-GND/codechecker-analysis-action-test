@@ -36,7 +36,7 @@ jobs:
 
 
       #- uses: whisperity/codechecker-analysis-action@master
-      - uses: P-GND/codechecker-analysis-action@master
+      - uses: P-GND/CodeChecker-Action@master
         id: codechecker
         continue-on-error: true
         with:
